@@ -31,8 +31,8 @@ dat %>%
 dat %>%
     group_by(mode) %>%
     summarize(calls = n(), 
-              total.hours = sum(duration),
-              avg.hours = mean(duration),
-              min.hours = min(duration),
-              max.hours = max(duration)
+              total.hours = round(sum(duration), 0),
+              avg.hours = round(mean(duration), 2),
+              min.hours = round(min(duration), 2),
+              max.hours = round(max(duration), 2)
               )
